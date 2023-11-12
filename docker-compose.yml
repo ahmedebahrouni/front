@@ -19,7 +19,7 @@ services:
   app:
     depends_on:
       - mysqldb
-    image:  ahmed1919/ahmedtest
+    image:  ahmed1919/ahmedtest1
     restart: on-failure
     env_file: ./.env
     angular-app:
@@ -27,7 +27,7 @@ services:
       ports:
         - "4200:80"  # Adapter le port selon les spécifications de votre application Angular
       depends_on:
-        - spring-app
+        - mysqldb
 
     ports:
       - $SPRING_LOCAL_PORT:$SPRING_DOCKER_PORT
