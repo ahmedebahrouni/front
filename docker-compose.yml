@@ -1,4 +1,3 @@
-
 version: "3.3"
 
 services:
@@ -21,7 +20,7 @@ services:
   app:
     depends_on:
       - mysqldb
-    image: ahmed1919/ahmedtest1
+    image: ahmed1919/ahmedtest
     restart: on-failure
     env_file: ./.env
     ports:
